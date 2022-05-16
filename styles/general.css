@@ -344,3 +344,34 @@ textarea {
     border-radius: 100%;
     width: 90px;
 }
+
+.check {
+    display: block;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+.check input {
+    position: absolute;
+    transform: scale(0);
+}
+
+.check input:checked ~ .checkbox {
+    border-color: #D9AE5F;
+    border-left-color: transparent;
+    border-radius: 0;
+    border-top-color: transparent;
+    margin-left: 16px;
+    transform: rotate(45deg);
+    width: 13px;
+}
+
+.checkbox {
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 2px solid #E0E0E0;
+    border-radius: 6px;
+    transition: all 0.375s;
+}

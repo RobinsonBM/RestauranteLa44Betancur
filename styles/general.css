@@ -236,36 +236,7 @@ footer p {
     font-size: 1.5rem;
 }
 
-#recomendados {
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 20fr;
-    grid-template-areas: 
-    ". titulo titulo titulo ."
-    ". imgs imgs imgs .";
-}
-.rec_titulo {
-    grid-area: titulo;
-}
-.rec-img {
-    display: grid;
-    gap: 5px;
-    grid-area: imgs;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    ". img ."
-    ". img ."
-    ". img ."
-    ". img ."
-    ". img .";
-}
-.rec-img img {
-    grid-area: img;
-    height: 240px;
-    width: 400px;
-}
+/* Recomendados */
 
 .rec_titulo {
     align-items: center;
@@ -275,6 +246,29 @@ footer p {
 
 .rec_titulo .barra {
     margin: 0 20px;
+}
+
+#carousel {
+    display: flex;
+    justify-content: space-around;
+}
+.carousel {
+    margin: 30px;
+    width: 400px;
+}
+.carousel img {
+    border-radius: 10px;
+    height: 320px;
+    object-fit: cover;
+    width: 400px;
+}
+.carousel-caption {
+    position: initial;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #000;
 }
 
 /* Contacto */

@@ -116,8 +116,8 @@ footer {
 }
 
 #footer {
-    display: flex;
-    width: 100%;
+    /* display: flex; */
+    /* width: 100%; */
 }
 
 .footer-logo {
@@ -429,4 +429,13 @@ textarea {
     border: 2px solid #E0E0E0;
     border-radius: 6px;
     transition: all 0.375s;
+}
+
+@media (max-width: 767px) {
+    .footer-nav,
+    .footer-carta,
+    .footer-contacto  {
+        justify-content: center;
+        text-align: center;
+    }
 }

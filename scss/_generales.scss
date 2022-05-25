@@ -9,12 +9,12 @@ body {
 }
 
 a {
-    color: #000;
+    color: $negro;
     height: 100%;
     text-decoration: none;
 
     &:hover {
-        color: #000;
+        color: $negro;
         text-decoration: none;
     }
 }
@@ -26,4 +26,153 @@ a {
     left: 15px;
     width: 100px;
     z-index: 1;
+}
+
+.navbar {
+    padding: 0 10px;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+
+    .container-fluid {
+        .navbar-brand {
+            width: 100px;
+        }
+
+        .navbar-collapse {
+            .navbar-item {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+                height: 100%;
+                justify-content: center;
+                list-style: none;
+                margin: 0 15px;
+                text-align: center;
+                width: 180px;
+
+                &:hover {
+                    background-color: #F2F2F2;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                    .barra {
+                        background-color: $amarillo;
+                    }
+                }
+
+                .barra {
+                    background-color: $marron;
+                    height: 3px;
+                    width: 180px;
+                }
+            }
+
+            .boton {
+                display: flex;
+                align-items: center;
+
+                .btn_contacto {
+                    background-color: $amarillo;
+                    border: none;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    color: $blanco;
+                    cursor: pointer;
+                    font-weight: bold;
+                    height: 30px;
+                    width: 150px;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 200ms;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+footer {
+    background-color: $marron;
+    bottom: 0;
+    color: $blanco;
+    padding: 15px 0 10px;
+    width: 100%;
+
+    #footer {
+        /* display: flex; */
+        /* width: 100%; */
+
+        .footer-logo {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 25%;
+
+            img {
+                border-radius: 100%;
+                width: 140px;
+            }
+        }
+
+        .footer-nav {
+            align-items: center;
+            display: flex;
+            width: 25%;
+
+            li {
+                list-style: none;
+            }
+        }
+
+        .footer-carta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 25%;
+
+            li {
+                list-style: none;
+            }
+        }
+
+        .footer-contacto {
+            width: 25%;
+
+            li {
+                list-style: none;
+                margin-bottom: 10px;
+            }
+
+            .redes {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+
+                img,
+                em {
+                    height: 14px;
+                }
+
+                em {
+                    color: $amarillo;
+                }
+            }
+        }
+
+        a {
+            color: $blanco;
+
+            &:hover {
+                color: $amarillo;
+            }
+        }
+    }
+
+    p {
+        color: $gris;
+        text-align: center;
+    }
 }

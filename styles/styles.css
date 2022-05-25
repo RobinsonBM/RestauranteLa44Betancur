@@ -39,7 +39,7 @@ a:hover {
   width: 100px;
 }
 
-.navbar .container-fluid .navbar-item {
+.navbar .container-fluid .navbar-collapse .navbar-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -61,14 +61,49 @@ a:hover {
   width: 180px;
 }
 
-.navbar .container-fluid .navbar-item:hover {
+.navbar .container-fluid .navbar-collapse .navbar-item:hover {
   background-color: #F2F2F2;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.navbar .container-fluid .navbar-item:hover .barra {
+.navbar .container-fluid .navbar-collapse .navbar-item:hover .barra {
   background-color: #D9AE5F;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-item .barra {
+  background-color: #73221A;
+  height: 3px;
+  width: 180px;
+}
+
+.navbar .container-fluid .navbar-collapse .boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .container-fluid .navbar-collapse .boton .btn_contacto {
+  background-color: #D9AE5F;
+  border: none;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  height: 30px;
+  width: 150px;
+}
+
+.navbar .container-fluid .navbar-collapse .boton .btn_contacto:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
 footer {
@@ -143,6 +178,16 @@ footer #footer .footer-contacto li {
   margin-bottom: 10px;
 }
 
+footer #footer .footer-contacto .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
 footer #footer .footer-contacto .redes img,
 footer #footer .footer-contacto .redes em {
   height: 14px;
@@ -153,7 +198,7 @@ footer #footer .footer-contacto .redes em {
 }
 
 footer #footer a {
-  color: #ffffff;
+  color: #fff;
 }
 
 footer #footer a:hover {
@@ -162,88 +207,6 @@ footer #footer a:hover {
 
 footer p {
   color: #999999;
-}
-
-.nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 60px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 15px;
-  width: 100%;
-}
-
-.item_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.barra {
-  background-color: #73221A;
-  height: 3px;
-  width: 180px;
-}
-
-.boton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.btn_contacto {
-  background-color: #D9AE5F;
-  border: none;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #ffffff;
-  cursor: pointer;
-  font-weight: bold;
-  height: 30px;
-  width: 150px;
-}
-
-.btn_contacto:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 200ms;
-  transition: 200ms;
-}
-
-.redes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-}
-
-.footer-contacto footer p {
   text-align: center;
 }
 
@@ -310,7 +273,7 @@ footer p {
   margin-top: 40px;
 }
 
-.rec_titulo {
+#recomendados .rec_titulo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -322,11 +285,11 @@ footer p {
           justify-content: center;
 }
 
-.rec_titulo .barra {
+#recomendados .rec_titulo .barra {
   margin: 0 20px;
 }
 
-#recomendados .card {
+#recomendados .container .card {
   border-radius: 20px;
   cursor: pointer;
   height: 250px;
@@ -336,22 +299,33 @@ footer p {
   width: 250px;
 }
 
-#recomendados .rec1 {
+#recomendados .container .card:hover .card-content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#recomendados .container .card:hover .card-content .card-description {
+  opacity: 1;
+  -webkit-transition-delay: .25s;
+          transition-delay: .25s;
+}
+
+#recomendados .container .card.rec1 {
   background: url(../assets/img/carnes.jpg) center no-repeat;
   background-size: cover;
 }
 
-#recomendados .rec2 {
+#recomendados .container .card.rec2 {
   background: url(../assets/img/cazuela.jpg) center no-repeat;
   background-size: cover;
 }
 
-#recomendados .rec3 {
+#recomendados .container .card.rec3 {
   background: url(../assets/img/picada.jpg) center no-repeat;
   background-size: cover;
 }
 
-#recomendados .card-content {
+#recomendados .container .card .card-content {
   background-color: #fff;
   border-top-left-radius: 20px;
   bottom: 0;
@@ -367,7 +341,7 @@ footer p {
   width: 100%;
 }
 
-#recomendados .card-content::before {
+#recomendados .container .card .card-content::before {
   border-radius: 30%;
   -webkit-box-shadow: inset 48px 48px #fff;
           box-shadow: inset 48px 48px #fff;
@@ -381,34 +355,23 @@ footer p {
   width: 84px;
 }
 
-#recomendados .card-title {
+#recomendados .container .card .card-content .card-title {
   color: #6a515e;
   font-size: 23px;
   line-height: 15px;
 }
 
-#recomendados .card-subtitle {
+#recomendados .container .card .card-content .card-subtitle {
   display: block;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
-#recomendados .card-description {
+#recomendados .container .card .card-content .card-description {
   font-size: 14px;
   opacity: 0;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
-}
-
-#recomendados .card:hover .card-content {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-#recomendados .card:hover .card-description {
-  opacity: 1;
-  -webkit-transition-delay: .25s;
-          transition-delay: .25s;
 }
 
 /* Contacto */

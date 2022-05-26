@@ -1,3 +1,5 @@
+@import "variables";
+
 .banner {
     position: relative;
 
@@ -24,6 +26,7 @@
 
     .carousel {
         height: 100vh;
+
         img {
             object-fit: cover;
             height: 100vh;
@@ -69,19 +72,17 @@
                 }
             }
 
-            &.rec1 {
-                background: url(../assets/img/carnes.jpg) center no-repeat;
-                background-size: cover;
-            }
+            $fotos: (
+                1: carnes,
+                2: cazuela,
+                3: picada,
+            );
 
-            &.rec2 {
-                background: url(../assets/img/cazuela.jpg) center no-repeat;
-                background-size: cover;
-            }
-
-            &.rec3 {
-                background: url(../assets/img/picada.jpg) center no-repeat;
-                background-size: cover;
+            @each $num, $foto in $fotos {
+                &.rec#{$num} {
+                    background: url(../assets/img/#{$foto}.jpg) center no-repeat;
+                    background-size: cover;
+                }
             }
 
             .card-content {

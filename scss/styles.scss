@@ -5,3 +5,29 @@
 @import "experiencia";
 @import "historia";
 @import "variables";
+
+/* clase */
+
+$i: 1;
+$tamaño: 400px;
+
+@for $i from 1 through 3 {
+    .ejemplos-#{$i} {
+        width: $tamaño * $i;
+        height: $tamaño * $i;
+    }
+}
+
+/* mapas */
+
+$redes: (
+    twitter: #55ACEE,
+    facebook: #3A5795,
+    instagram: #C25E30
+);
+
+@each $red, $color in $redes {
+    .btn--#{$red} {
+        background-color: $color;
+    }
+}

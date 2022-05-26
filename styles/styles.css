@@ -114,9 +114,8 @@ footer {
   width: 100%;
 }
 
-footer #footer {
-  /* display: flex; */
-  /* width: 100%; */
+footer #footer ul {
+  padding: 0;
 }
 
 footer #footer .footer-logo {
@@ -129,7 +128,6 @@ footer #footer .footer-logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 25%;
 }
 
 footer #footer .footer-logo img {
@@ -144,7 +142,6 @@ footer #footer .footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
 }
 
 footer #footer .footer-nav li {
@@ -162,15 +159,10 @@ footer #footer .footer-carta {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 25%;
 }
 
 footer #footer .footer-carta li {
   list-style: none;
-}
-
-footer #footer .footer-contacto {
-  width: 25%;
 }
 
 footer #footer .footer-contacto li {
@@ -197,6 +189,19 @@ footer #footer .footer-contacto .redes em {
   color: #D9AE5F;
 }
 
+@media (max-width: 767px) {
+  footer #footer .footer-logo,
+  footer #footer .footer-nav,
+  footer #footer .footer-carta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 footer #footer a {
   color: #fff;
 }
@@ -210,9 +215,29 @@ footer p {
   text-align: center;
 }
 
-/* Index */
 .banner {
   position: relative;
+}
+
+.banner .opacity {
+  background-color: rgba(0, 0, 0, 0.627);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.banner .opacity h1 {
+  color: white;
+  font-size: 5 5rem;
+  text-align: center;
+}
+
+.banner .opacity q {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .banner .carousel {
@@ -224,47 +249,6 @@ footer p {
      object-fit: cover;
   height: 100vh;
   width: 100%;
-}
-
-.opacity {
-  background-color: rgba(0, 0, 0, 0.627);
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.titulo {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 90vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.opacity h1 {
-  color: white;
-  font-size: 5rem;
-  text-align: center;
-}
-
-.opacity q {
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 /* Recomendados */
@@ -357,25 +341,24 @@ footer p {
 
 #recomendados .container .card .card-content .card-title {
   color: #6a515e;
-  font-size: 23px;
+  font-size: 1.438rem;
   line-height: 15px;
 }
 
 #recomendados .container .card .card-content .card-subtitle {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-bottom: 10px;
 }
 
 #recomendados .container .card .card-content .card-description {
-  font-size: 14px;
+  font-size: 0.875rem;
   opacity: 0;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
 }
 
-/* Contacto */
-.map {
+#header .map {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,44 +370,10 @@ footer p {
   width: 100%;
 }
 
-.map_rest {
+#header .map .map_rest {
   border: none;
   height: 70vh;
   width: 90%;
-}
-
-fieldset {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-legend {
-  color: #73221A;
-  text-align: center;
-}
-
-input,
-select {
-  height: 35px;
-}
-
-.contact_input,
-textarea {
-  border: 2px dashed #e0e0e0;
-  margin-bottom: 10px;
-  width: 80%;
-}
-
-.btn {
-  margin: 10px 0;
 }
 
 .contacto {
@@ -449,31 +398,53 @@ textarea {
   width: 40%;
 }
 
-.contacto .img {
-  bottom: 0;
-  position: absolute;
+.contacto .contact fieldset {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacto .contact fieldset legend {
+  color: #73221A;
+  text-align: center;
+}
+
+.contacto .contact fieldset input {
+  height: 35px;
+}
+
+.contacto .contact fieldset .contact_input,
+.contacto .contact fieldset textarea {
+  border: 2px dashed #e0e0e0;
   margin-bottom: 10px;
+  width: 80%;
 }
 
-.img .contact_logo {
-  border-radius: 100%;
-  width: 90px;
+.contacto .contact fieldset .btn {
+  margin: 10px 0;
 }
 
-.check {
+.contacto .contact fieldset .check {
   display: block;
   cursor: pointer;
   height: 25px;
   width: 25px;
 }
 
-.check input {
+.contacto .contact fieldset .check input {
   position: absolute;
   -webkit-transform: scale(0);
           transform: scale(0);
 }
 
-.check input:checked ~ .checkbox {
+.contacto .contact fieldset .check input:checked ~ .checkbox {
   border-color: #D9AE5F;
   border-left-color: transparent;
   border-radius: 0;
@@ -484,7 +455,7 @@ textarea {
   width: 13px;
 }
 
-.checkbox {
+.contacto .contact fieldset .check .checkbox {
   display: block;
   width: inherit;
   height: inherit;
@@ -492,6 +463,17 @@ textarea {
   border-radius: 6px;
   -webkit-transition: all 0.375s;
   transition: all 0.375s;
+}
+
+.contacto .img {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 10px;
+}
+
+.contacto .img .contact_logo {
+  border-radius: 100%;
+  width: 90px;
 }
 
 @media (max-width: 767px) {
@@ -503,5 +485,34 @@ textarea {
             justify-content: center;
     text-align: center;
   }
+}
+
+/* clase */
+.ejemplos-1 {
+  width: 400px;
+  height: 400px;
+}
+
+.ejemplos-2 {
+  width: 800px;
+  height: 800px;
+}
+
+.ejemplos-3 {
+  width: 1200px;
+  height: 1200px;
+}
+
+/* mapas */
+.btn--twitter {
+  background-color: #55ACEE;
+}
+
+.btn--facebook {
+  background-color: #3A5795;
+}
+
+.btn--instagram {
+  background-color: #C25E30;
 }
 /*# sourceMappingURL=styles.css.map */

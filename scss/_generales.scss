@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
     margin: 0;
     padding: 0;
@@ -102,14 +104,15 @@ footer {
     width: 100%;
 
     #footer {
-        /* display: flex; */
-        /* width: 100%; */
+
+        ul {
+            padding: 0;
+        }
 
         .footer-logo {
             align-items: center;
             display: flex;
             justify-content: center;
-            width: 25%;
 
             img {
                 border-radius: 100%;
@@ -120,7 +123,6 @@ footer {
         .footer-nav {
             align-items: center;
             display: flex;
-            width: 25%;
 
             li {
                 list-style: none;
@@ -131,7 +133,6 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 25%;
 
             li {
                 list-style: none;
@@ -139,7 +140,6 @@ footer {
         }
 
         .footer-contacto {
-            width: 25%;
 
             li {
                 list-style: none;
@@ -159,6 +159,15 @@ footer {
                 em {
                     color: $amarillo;
                 }
+            }
+        }
+
+        .footer-logo,
+        .footer-nav,
+        .footer-carta {
+            @media (max-width: 767px) {
+                display: flex;
+                justify-content: center;
             }
         }
 

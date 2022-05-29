@@ -75,7 +75,7 @@
             $fotos: (
                 1: carnes,
                 2: cazuela,
-                3: picada,
+                3: picada
             );
 
             @each $num, $foto in $fotos {

@@ -4,6 +4,7 @@
         display: flex;
         background-color: #EEEEEE;
         justify-content: center;
+        margin-top: 40px;
         position: relative;
         width: 100%;
 
@@ -95,11 +96,28 @@
     }
 }
 @media (max-width: 767px) {
+    .contacto {
+        .contact {
+            width: 70%;
+        }
+        .img {
+            display: none;
+        }
+    }
 
     .footer-nav,
     .footer-carta,
     .footer-contacto {
         justify-content: center;
         text-align: center;
+    }
+}
+@media (max-width: 540px) {
+    .contacto {
+        .contact {
+            margin: 30px auto;
+            position: initial;
+            width: 90%;
+        }
     }
 }

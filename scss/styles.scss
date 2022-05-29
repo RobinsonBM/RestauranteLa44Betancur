@@ -9,12 +9,15 @@
 /* clase */
 
 $i: 1;
-$tamaño: 400px;
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
 
 @for $i from 1 through 3 {
     .ejemplos-#{$i} {
-        width: $tamaño * $i;
-        height: $tamaño * $i;
+        @include size (400 + $i, 100 + $i)
     }
 }
 

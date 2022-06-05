@@ -6,6 +6,12 @@ $blanco: #fff;
 $gris: #999999;
 $negro: #000;
 
+// Mixins 
+@mixin sizes ($height, $width) {
+    height: $height;
+    width: $width;
+}
+
 // Tamaño fuente
 $ft8: 0.5rem;
 $ft9: 0.5625rem;

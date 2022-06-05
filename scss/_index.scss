@@ -5,22 +5,20 @@
 
     .opacity {
         background-color: rgba(0, 0, 0, 0.627);
-        height: 100vh;
         position: absolute;
         top: 0;
-        width: 100%;
         z-index: 1;
+        @include sizes (100vh, 100%);
 
         h1 {
             color: white;
-            font-size: 5$ft80;
+            font-size: $ft80;
             text-align: center;
         }
 
         q {
-            color: white;
+            @extend h1;
             font-size: $ft24;
-            text-align: center;
         }
     }
 
@@ -29,8 +27,7 @@
 
         img {
             object-fit: cover;
-            height: 100vh;
-            width: 100%;
+            @include sizes (100vh, 100%);
         }
     }
 }
@@ -55,11 +52,10 @@
         .card {
             border-radius: 20px;
             cursor: pointer;
-            height: 250px;
             margin: 15px;
             overflow: hidden;
             position: relative;
-            width: 250px;
+            @include sizes (250px, 250px);
 
             &:hover {
                 .card-content {
@@ -100,12 +96,11 @@
                     border-radius: 30%;
                     box-shadow: inset 48px 48px $blanco;
                     content: "";
-                    height: 76px;
                     position: absolute;
                     right: -45px;
                     transform: rotate(-175deg);
                     top: -24px;
-                    width: 84px;
+                    @include sizes (76px, 84px);
                 }
 
                 .card-title {

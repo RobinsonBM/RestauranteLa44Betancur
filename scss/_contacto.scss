@@ -34,8 +34,9 @@
             display: flex;
             flex-direction: column;
 
-            legend {
+            h1 {
                 color: $marron;
+                font-size: $ft25;
                 text-align: center;
             }
 

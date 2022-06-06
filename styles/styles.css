@@ -114,6 +114,12 @@ a:hover {
   transition: 200ms;
 }
 
+.barra {
+  background-color: #73221A;
+  height: 3px;
+  width: 180px;
+}
+
 footer {
   background-color: #73221A;
   bottom: 0;
@@ -357,6 +363,15 @@ footer p {
   transition: opacity .5s;
 }
 
+#carta .carta_titulo {
+  margin-top: 40px;
+}
+
+#carta .carta_titulo h1, #carta .carta_titulo .banner .opacity q, .banner .opacity #carta .carta_titulo q {
+  margin: 0 20px;
+  text-align: center;
+}
+
 #header .map {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,8 +426,9 @@ footer p {
           flex-direction: column;
 }
 
-.contacto .contact fieldset legend {
+.contacto .contact fieldset h1, .contacto .contact fieldset .banner .opacity q, .banner .opacity .contacto .contact fieldset q {
   color: #73221A;
+  font-size: 1.5625rem;
   text-align: center;
 }
 
@@ -499,5 +515,23 @@ footer p {
     position: initial;
     width: 90%;
   }
+}
+
+#experiencia .exp_titulo {
+  margin-top: 40px;
+}
+
+#experiencia .exp_titulo h1, #experiencia .exp_titulo .banner .opacity q, .banner .opacity #experiencia .exp_titulo q {
+  margin: 0 20px;
+  text-align: center;
+}
+
+#historia .hist_titulo {
+  margin-top: 40px;
+}
+
+#historia .hist_titulo h1, #historia .hist_titulo .banner .opacity q, .banner .opacity #historia .hist_titulo q {
+  margin: 0 20px;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

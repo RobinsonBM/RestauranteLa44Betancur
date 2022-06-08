@@ -23,77 +23,52 @@ a {
 
 .logo {
     border-radius: 100%;
-    position: absolute;
-    top: 5px;
-    left: 15px;
+    position: relative;
+    top: 30px;
     width: 100px;
     z-index: 1;
 }
 
 .navbar {
-    padding: 0 10px;
-    top: 0;
-    width: 100vw;
+    height: 50px;
+    position: relative;
+    z-index: 2;
 
     .container-fluid {
-        .navbar-brand {
-            width: 100px;
-        }
+        .menu-nav {
+            ul {
+                li {
+                    font-weight: bold;
+                    margin: 0 5px;
+                    text-align: center;
 
-        .offcanvas {
-            &.offcanvas-end {
-                @include sizes (100vh, 260px)
-            }
-            .navbar-item {
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                font-weight: bold;
-                justify-content: center;
-                list-style: none;
-                margin: 0 15px;
-                text-align: center;
-                @include sizes (100%, 180px);
+                    &:hover {
+                        background-color: $gris-claro;
+                    }
 
-                &:hover {
-                    background-color: #F2F2F2;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-                    .barra {
+                    &:hover .barra {
                         background-color: $amarillo;
                     }
-                }
-
-                .barra {
-                    background-color: $marron;
-                    @include sizes (3px, 180px);
                 }
             }
 
             .boton {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-                height: 100px;
-
                 .btn_contacto {
                     background-color: $amarillo;
                     border: none;
-                    border-radius: 8px;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    box-shadow: 0 3px 6px $amarillo-opc;
                     color: $blanco;
-                    cursor: pointer;
-                    font-weight: bold;
-                    @include sizes (30px, 150px);
+                    height: 30px;
+                    padding: 0 20px;
+                    transition: all .5s;
 
                     &:hover {
                         transform: scale(1.1);
-                        transition: 200ms;
                     }
                 }
             }
         }
-
     }
 }
 
@@ -189,5 +164,37 @@ footer {
     p {
         color: $gris;
         text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0;
+
+        .container-fluid {
+            height: 50px;
+
+            .logo {
+                top: 0;
+            }
+
+            .menu-nav {
+                background-color: $blanco;
+                padding: 10px 0;
+
+                ul {
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+
+                .boton {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
     }
 }

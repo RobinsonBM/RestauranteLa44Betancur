@@ -785,6 +785,14 @@ footer p {
      object-fit: cover;
 }
 
+@media (max-width: 480px) {
+  #experiencia .feed .contenedor {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .hist-banner img {
   -o-object-fit: cover;
      object-fit: cover;

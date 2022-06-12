@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -68,6 +69,10 @@ a:hover {
 .barra {
   background-color: #73221A;
   height: 3px;
+  width: 120px;
+}
+
+.barra.barra-nav {
   width: 180px;
 }
 
@@ -358,6 +363,237 @@ footer p {
 #carta .carta_titulo h1, #carta .carta_titulo .banner .opacity q, .banner .opacity #carta .carta_titulo q {
   margin: 0 20px;
   text-align: center;
+}
+
+#carta .tipicos .titulo,
+#carta .asados .titulo {
+  width: 120px;
+}
+
+#carta .tipicos .titulo .barra,
+#carta .asados .titulo .barra {
+  width: 100%;
+}
+
+#carta .tipicos .plato,
+#carta .asados .plato {
+  margin: 20px 0 40px;
+}
+
+#carta .tipicos .plato .img-principal,
+#carta .asados .plato .img-principal {
+  height: 400px;
+  margin-right: 10px;
+  width: 50%;
+}
+
+#carta .tipicos .plato .img-principal img,
+#carta .asados .plato .img-principal img {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 6px #00000029;
+          box-shadow: 0 3px 6px #00000029;
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#carta .tipicos .plato .aux,
+#carta .asados .plato .aux {
+  height: 400px;
+  padding: 20px 30px 0;
+  width: 50%;
+}
+
+#carta .tipicos .plato .aux .description h3,
+#carta .asados .plato .aux .description h3 {
+  text-align: center;
+}
+
+#carta .tipicos .plato .aux .description p,
+#carta .asados .plato .aux .description p {
+  text-align: justify;
+}
+
+#carta .tipicos .plato .aux .description h4,
+#carta .asados .plato .aux .description h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#carta .tipicos .plato .aux .otros-productos .sancocho,
+#carta .asados .plato .aux .otros-productos .sancocho {
+  background: url(../assets/img/sancocho.jpg) center no-repeat;
+}
+
+#carta .tipicos .plato .aux .otros-productos .cazuela,
+#carta .asados .plato .aux .otros-productos .cazuela {
+  background: url(../assets/img/cazuela.jpg) center no-repeat;
+}
+
+#carta .tipicos .plato .aux .otros-productos .mondongo,
+#carta .asados .plato .aux .otros-productos .mondongo {
+  background: url(../assets/img/mondongo.jpg) center no-repeat;
+}
+
+#carta .tipicos .plato .aux .otros-productos .solomo,
+#carta .asados .plato .aux .otros-productos .solomo {
+  background: url(../assets/img/solomo.jpg) center no-repeat;
+}
+
+#carta .tipicos .plato .aux .otros-productos .cañon,
+#carta .asados .plato .aux .otros-productos .cañon {
+  background: url(../assets/img/cañon.jpg) center no-repeat;
+}
+
+#carta .tipicos .plato .aux .otros-productos .pechuga,
+#carta .asados .plato .aux .otros-productos .pechuga {
+  background: url(../assets/img/pechuga.jpg) center no-repeat;
+}
+
+#carta .tipicos .plato .aux .otros-productos .card,
+#carta .asados .plato .aux .otros-productos .card {
+  background-size: cover;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 6px #00000029;
+          box-shadow: 0 3px 6px #00000029;
+  height: 200px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  z-index: 1;
+}
+
+#carta .tipicos .plato .aux .otros-productos .card::before, #carta .tipicos .plato .aux .otros-productos .card::after,
+#carta .asados .plato .aux .otros-productos .card::before,
+#carta .asados .plato .aux .otros-productos .card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(60% + 35px);
+  background-color: #fff;
+  -webkit-transition: -webkit-transform .5s .25s ease-in;
+  transition: -webkit-transform .5s .25s ease-in;
+  transition: transform .5s .25s ease-in;
+  transition: transform .5s .25s ease-in, -webkit-transform .5s .25s ease-in;
+  z-index: -1;
+}
+
+#carta .tipicos .plato .aux .otros-productos .card::before,
+#carta .asados .plato .aux .otros-productos .card::before {
+  top: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+#carta .tipicos .plato .aux .otros-productos .card::after,
+#carta .asados .plato .aux .otros-productos .card::after {
+  bottom: 0;
+  -webkit-clip-path: polygon(0 55%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 55%, 100% 0, 100% 100%, 0 100%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+#carta .tipicos .plato .aux .otros-productos .card:hover::before, #carta .tipicos .plato .aux .otros-productos .card:hover::after,
+#carta .asados .plato .aux .otros-productos .card:hover::before,
+#carta .asados .plato .aux .otros-productos .card:hover::after {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#carta .tipicos .plato .aux .otros-productos .card:hover .card-content,
+#carta .asados .plato .aux .otros-productos .card:hover .card-content {
+  opacity: 1;
+  -webkit-transition-delay: .75s;
+          transition-delay: .75s;
+}
+
+#carta .tipicos .plato .aux .otros-productos .card .card-content,
+#carta .asados .plato .aux .otros-productos .card .card-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  padding: 0 20px;
+  -webkit-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+#carta .tipicos .plato .aux .otros-productos .card .card-content .card-title,
+#carta .asados .plato .aux .otros-productos .card .card-content .card-title {
+  font-size: 1.125rem;
+}
+
+#carta .tipicos .plato .aux .otros-productos .card .card-content .card-description,
+#carta .asados .plato .aux .otros-productos .card .card-content .card-description {
+  font-size: 0.8125rem;
+}
+
+#carta .asados {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#carta .asados .plato {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  #carta .tipicos .plato,
+  #carta .asados .plato {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #carta .tipicos .plato .img-principal,
+  #carta .asados .plato .img-principal {
+    width: 100% !important;
+  }
+  #carta .tipicos .plato .aux,
+  #carta .asados .plato .aux {
+    height: auto;
+    width: 100%;
+  }
+  #carta .tipicos .plato .aux .otros-productos,
+  #carta .asados .plato .aux .otros-productos {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
 }
 
 #header .map {

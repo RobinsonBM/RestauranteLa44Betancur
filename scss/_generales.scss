@@ -75,7 +75,10 @@ a {
 .barra {
     background-color: #73221A;
     height: 3px;
-    width: 180px;
+    width: 120px;
+    &.barra-nav {
+        width: 180px;
+    }
 }
 
 footer {

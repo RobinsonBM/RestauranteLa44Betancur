@@ -3,9 +3,174 @@
 #carta {
     .carta_titulo {
         margin-top: 40px;
+
         h1 {
             margin: 0 20px;
             text-align: center;
         }
+    }
+
+    .tipicos,
+    .asados {
+        .titulo {
+            width: 120px;
+
+            .barra {
+                width: 100%;
+            }
+        }
+
+        .plato {
+            margin: 20px 0 40px;
+
+            .img-principal {
+                height: 400px;
+                margin-right: 10px;
+                width: 50%;
+
+                img {
+                    border-radius: 10px;
+                    box-shadow: 0 3px 6px #00000029;
+                    height: 400px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .aux {
+                height: 400px;
+                padding: 20px 30px 0;
+                width: 50%;
+
+                .description {
+                    h3 {
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: justify;
+                    }
+
+                    h4 {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+
+                .otros-productos {
+                    $platos: (sancocho,
+                            cazuela,
+                            mondongo,
+                            solomo,
+                            cañon,
+                            pechuga);
+
+                    @each $plato in $platos {
+                        .#{$plato} {
+                            background: url(../assets/img/#{$plato}.jpg) center no-repeat;
+
+                        }
+                    }
+
+                    .card {
+                        background-size: cover;
+                        border-radius: 20px;
+                        box-shadow: 0 3px 6px #00000029;
+                        height: 200px;
+                        margin: 5px;
+                        overflow: hidden;
+                        position: relative;
+                        width: 200px;
+                        z-index: 1;
+
+                        &::before,
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            width: 100%;
+                            height: calc(60% + 35px);
+                            background-color: $blanco;
+                            transition: transform .5s .25s ease-in;
+                            z-index: -1;
+                        }
+
+                        &::before {
+                            top: 0;
+                            clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+                            transform: translateY(-100%);
+                        }
+
+                        &::after {
+                            bottom: 0;
+                            clip-path: polygon(0 55%, 100% 0, 100% 100%, 0 100%);
+                            transform: translateY(100%);
+                        }
+
+                        &:hover::before,
+                        &:hover::after {
+                            transform: translateY(0);
+                        }
+
+                        &:hover {
+                            .card-content {
+                                opacity: 1;
+                                transition-delay: .75s;
+                            }
+                        }
+
+                        .card-content {
+                            align-items: center;
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
+                            justify-content: center;
+                            opacity: 0;
+                            padding: 0 20px;
+                            transition: opacity .25s;
+
+                            .card-title {
+                                font-size: $ft18;
+                            }
+
+                            .card-description {
+                                font-size: $ft13;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .asados {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+
+        .plato {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tipicos,
+        .asados {
+            .plato {
+                flex-direction: column;
+                .img-principal {
+                    width: 100% !important;
+                }
+                .aux {
+                    height: auto;
+                    width: 100%;
+                    .otros-productos {
+                        flex-wrap: wrap;
+                        justify-content: center !important;
+                    }
+                }
+            }
+        }
+
     }
 }

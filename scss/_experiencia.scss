@@ -3,43 +3,49 @@
 #experiencia {
     .exp_titulo {
         margin-top: 40px;
+
         h1 {
             margin: 0 20px;
             text-align: center;
         }
     }
+
     .video {
         iframe {
             border-radius: 10px;
         }
     }
+
     .feed {
         .titulo {
             .barra {
                 width: 150px;
             }
         }
+
         .contenedor {
             display: flex;
             flex-wrap: wrap;
-            justify-content:space-between;
-            img {   
+            justify-content: center;
+
+            img {
                 border: 1px solid $gris-sec;
                 border-radius: 10px;
                 box-shadow: 0 3px 6px #00000029;
-                margin: 10px;
+                margin: 10px auto;
                 max-height: 280px;
                 max-width: 380px;
                 object-fit: cover;
             }
         }
-        
+
     }
-    @media (max-width: 480px) {
-     .feed {
-        .contenedor {
-            justify-content: center;
-        }
-     }   
-    }
+
+    // @media (max-width: 480px) {
+    //     .feed {
+    //         .contenedor {
+    //             justify-content: center;
+    //         }
+    //     }
+    // }
 }

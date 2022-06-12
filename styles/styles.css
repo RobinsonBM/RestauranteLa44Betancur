@@ -768,9 +768,9 @@ footer p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #experiencia .feed .contenedor img {
@@ -778,19 +778,11 @@ footer p {
   border-radius: 10px;
   -webkit-box-shadow: 0 3px 6px #00000029;
           box-shadow: 0 3px 6px #00000029;
-  margin: 10px;
+  margin: 10px auto;
   max-height: 280px;
   max-width: 380px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media (max-width: 480px) {
-  #experiencia .feed .contenedor {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 .hist-banner img {

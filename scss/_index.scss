@@ -5,22 +5,7 @@
     z-index: 1;
 
     .opacity {
-        background-color: rgba(0, 0, 0, 0.627);
-        position: absolute;
         top: 0;
-        z-index: 1;
-        @include sizes (100vh, 100%);
-
-        h1 {
-            color: white;
-            font-size: $ft80;
-            text-align: center;
-        }
-
-        q {
-            @extend h1;
-            font-size: $ft24;
-        }
     }
 
     .carousel {

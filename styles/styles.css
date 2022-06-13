@@ -546,11 +546,13 @@ footer p {
 #carta .tipicos .plato .aux .otros-productos .card .card-content .card-title,
 #carta .asados .plato .aux .otros-productos .card .card-content .card-title {
   font-size: 1.125rem;
+  text-align: center;
 }
 
 #carta .tipicos .plato .aux .otros-productos .card .card-content .card-description,
 #carta .asados .plato .aux .otros-productos .card .card-content .card-description {
   font-size: 0.8125rem;
+  text-align: center;
 }
 
 #carta .asados {

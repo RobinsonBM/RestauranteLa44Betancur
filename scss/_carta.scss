@@ -132,11 +132,21 @@
                             .card-title {
                                 font-size: $ft18;
                                 text-align: center;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
                             }
-                            
+
                             .card-description {
                                 font-size: $ft13;
+                                overflow: hidden;
                                 text-align: center;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 5;
+                                -webkit-box-orient: vertical;
                             }
                         }
                     }
@@ -156,16 +166,20 @@
     }
 
     @media (max-width: 768px) {
+
         .tipicos,
         .asados {
             .plato {
                 flex-direction: column;
+
                 .img-principal {
                     width: 100% !important;
                 }
+
                 .aux {
                     height: auto;
                     width: 100%;
+
                     .otros-productos {
                         flex-wrap: wrap;
                         justify-content: center !important;

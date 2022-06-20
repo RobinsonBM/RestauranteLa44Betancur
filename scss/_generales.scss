@@ -220,3 +220,14 @@ footer {
         }
     }
 }
+
+@media (max-width: 576px) {
+    .opacity {
+        h1 {
+            font-size: $ft40;
+        }
+        q {
+            font-size: $ft20;
+        }
+    }
+}
